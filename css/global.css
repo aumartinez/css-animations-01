@@ -5,6 +5,7 @@ body {
 	font-family: 'Ubuntu', Arial, sans-serif;
 	font-size: 16px;
 	margin: 0;
+	color: #333;
 }
 
 h1 {
@@ -24,15 +25,76 @@ h2 {
 	overflow: hidden;
 }
 
+.row {
+	overflow: hidden;
+	padding: 30px 0;
+}
+
 .col-2 {
-	width: 50%;
-	float: left;
+	width: 100%;
+	float: none;
+}
+
+code {
+	color: red;
 }
 
 ul.list {
 	list-style: none;
 	padding: 0;
+	box-sizing: border-box;
 	text-align: center;
 	max-width: 140px;
-	margin: auto;
+	margin: auto;   	
+}
+
+.list>li:first-child {
+	padding: 25px;
+	width: auto;
+	background-color: #ccc;  	
+}
+
+.list>li {
+	padding: 15px;
+	background-color: #f3f3f3;
+	position: relative;		
+	box-sizing: border-box;
+	cursor: pointer;	
+}
+
+.list.t-scale>li {	
+	transform: scale(1);	
+	transition: transform 0.5s ease; 
+	z-index: 0;
+}
+
+.list.t-width>li {
+	width: 140px;
+	transition: width 0.5s ease;
+}
+
+.list.t-bg>li:not(:first-child) {	
+	background-color: #f3f3f3;
+	transition: background-color 0.5s ease;
+}
+
+.list.t-scale>li:hover:not(:first-child) {	
+	transform: scale(1.2);
+	z-index: 1;	
+}
+
+.list.t-width>li:hover:not(:first-child) {		
+	width: 160px;  	
+}
+
+.list.t-bg>li:hover:not(:first-child) {		
+	background-color: teal;
+	color: #fff;
+}
+
+@media (min-width: 768px){
+  .col-2 {
+	width: 50%;
+	float: left;
+  }	
 }
