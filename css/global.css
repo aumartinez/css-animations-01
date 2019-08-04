@@ -1,0 +1,30 @@
+/* CSS */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+body {
+	font-family: 'Ubuntu', Arial, sans-serif;
+	font-size: 16px;
+	margin: 0;
+}
+
+h1 {
+	font-size: 50px;
+	text-align: center;
+}
+
+h2 {
+	font-size: 36px;
+	text-align: center;
+}
+
+#main {	
+	max-width: 960px;
+	margin: 0 auto 50px;
+	padding: 0 15px;
+	overflow: hidden;
+}
+
+.col-2 {
+	width: 50%;
+	float: left;
+}
