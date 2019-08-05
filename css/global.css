@@ -74,8 +74,8 @@ ul.list {
 }
 
 .list.t-bg>li:not(:first-child) {	
-	background-color: #f3f3f3;
-	transition: background-color 0.5s ease;
+	background-color: #f3f3f3;	
+	transition: background-color 0.8s;
 }
 
 .list.t-scale>li:hover:not(:first-child) {	
